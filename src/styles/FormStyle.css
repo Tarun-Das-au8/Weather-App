@@ -11,11 +11,8 @@ form {
 
 form input[name="city"],
 form input[name="country"] {
-  background-color: transparent;
-  color: white;
-  border: none;
-  border-bottom: 2px solid whitesmoke;
-  border-radius: 0;
+  border: 2px solid rgb(223, 238, 11);
+  border-radius: 5;
 }
 
 button:hover {

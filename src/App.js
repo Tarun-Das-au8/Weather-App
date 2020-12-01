@@ -53,9 +53,6 @@ class App extends React.Component {
       case rangeId === 800:
         this.setState({ icon: icons.Clear });
         break;
-      case rangeId >= 801 && rangeId <= 804:
-        this.setState({ icon: icons.Clouds });
-        break;
       default:
         this.setState({ icon: icons.Clouds });
     }
@@ -76,8 +73,9 @@ class App extends React.Component {
       const api_call = await fetch(
         `http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${Api_Key}`
       );
-
+      console.log(api_call);
       const response = await api_call.json();
+      
 
       this.setState({
         city: `${response.name}, ${response.sys.country}`,
